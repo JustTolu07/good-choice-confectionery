@@ -1,0 +1,579 @@
+<?php
+$currentYear = date('Y');
+
+$navLinks = [
+    ['label' => 'Products', 'href' => '#products'],
+    ['label' => 'Services', 'href' => '#services'],
+    ['label' => 'Catering', 'href' => '#catering'],
+    ['label' => 'Training', 'href' => '#training'],
+    ['label' => 'Gallery', 'href' => '#gallery'],
+];
+
+$heroCategories = [
+    [
+        'id' => 'cakes',
+        'eyebrow' => 'Artisanal Perfection',
+        'headline' => 'FLAVOURFUL MOMENTS AT OUR CAKE HAVEN',
+        'subtext' => 'Experience a symphony of flavours with our premium custom cakes, where every bite is a delightful journey. From classic favourites to luxury innovations, we craft centerpieces that redefine satisfaction.',
+        'image' => './cake.png',
+        'thumb' => './cake.png',
+    ],
+    [
+        'id' => 'pastries',
+        'eyebrow' => 'Fresh from the oven',
+        'headline' => 'FLAKY & BUTTERY DELIGHTS',
+        'subtext' => 'Indulge in our exquisite assortment of French pastries and baked goods. Each batch is made with premium ingredients, offering layered textures and an unforgettable taste.',
+        'image' => 'https://images.unsplash.com/photo-1549590143-d5855148a9d5?q=80&w=1200&auto=format&fit=crop',
+        'thumb' => 'https://images.unsplash.com/photo-1549590143-d5855148a9d5?q=80&w=300&auto=format&fit=crop',
+    ],
+    [
+        'id' => 'catering',
+        'eyebrow' => 'Luxury Event Services',
+        'headline' => 'UNFORGETTABLE CATERING',
+        'subtext' => 'We curate polished dessert & savory food experiences for weddings, corporate galas, and private events. Elevate your gathering with our bespoke, premium catering services.',
+        'image' => 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=1200&auto=format&fit=crop',
+        'thumb' => 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300&auto=format&fit=crop',
+    ]
+];
+
+$services = [
+    [
+        'title' => 'Cakes',
+        'description' => 'Custom-designed centerpiece cakes for weddings, birthdays, launches, and unforgettable milestones.',
+        'icon' => 'bi-cake2-fill',
+        'image' => 'https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'title' => 'Pastries',
+        'description' => 'Flaky, buttery, and beautifully finished pastries baked fresh for daily cravings and premium gifting.',
+        'icon' => 'bi-cookie',
+        'image' => 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'title' => 'Catering',
+        'description' => 'Dessert tables and confectionery styling for elegant events, intimate gatherings, and luxury celebrations.',
+        'icon' => 'bi-cup-hot-fill',
+        'image' => 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'title' => 'Training',
+        'description' => 'Hands-on baking education designed to help beginners and professionals sharpen commercial-level skills.',
+        'icon' => 'bi-mortarboard-fill',
+        'image' => 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=900',
+    ],
+];
+
+$products = [
+    [
+        'name' => 'Champagne Gold Wedding Cake',
+        'price' => 'Starting from $450',
+        'category' => 'Cakes',
+        'image' => 'https://images.unsplash.com/photo-1535254973040-607b474cb8c2?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'name' => 'Artisanal Macaron Suite',
+        'price' => '$45 / 12 pcs',
+        'category' => 'Pastries',
+        'image' => 'https://images.unsplash.com/photo-1559622214-f8a9850965bb?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'name' => 'Red Velvet Royale',
+        'price' => '$120',
+        'category' => 'Celebration Cakes',
+        'image' => 'https://images.unsplash.com/photo-1616031036561-0b362bc9478d?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'name' => 'Belgian Chocolate Croissants',
+        'price' => '$6.50 / each',
+        'category' => 'Pastries',
+        'image' => 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=900',
+    ],
+];
+
+$courses = [
+    [
+        'title' => 'Mastering Luxury Cakes',
+        'duration' => '4 Weeks',
+        'price' => '#100000',
+        'level' => 'Advanced',
+        'image' => 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'title' => 'French Pastry Fundamentals',
+        'duration' => '2 Weeks',
+        'price' => '$450',
+        'level' => 'Intermediate',
+        'image' => 'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&q=80&w=900',
+    ],
+    [
+        'title' => 'Catering & Event Styling',
+        'duration' => '3 Days',
+        'price' => '$300',
+        'level' => 'Professional',
+        'image' => 'https://images.unsplash.com/photo-1530103043960-ef38714abb15?auto=format&fit=crop&q=80&w=900',
+    ],
+];
+
+$gallery = [
+    'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&q=80&w=900',
+    'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&q=80&w=900',
+    'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&q=80&w=900',
+    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&q=80&w=900',
+    'https://images.unsplash.com/photo-1558961312-3004b3602f23?auto=format&fit=crop&q=80&w=900',
+    'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&q=80&w=900',
+];
+
+$testimonials = [
+    [
+        'name' => 'Sarah Williams',
+        'role' => 'Bride',
+        'text' => 'The wedding cake was stunning, delicious, and delivered exactly as promised. Guests still ask who made it.',
+    ],
+    [
+        'name' => 'John Carter',
+        'role' => 'Event Planner',
+        'text' => 'Their dessert styling is refined, dependable, and always camera-ready. It makes event planning much easier.',
+    ],
+    [
+        'name' => 'Amanda Lee',
+        'role' => 'Student',
+        'text' => 'The masterclass gave me structure, confidence, and practical methods I could immediately use in my baking business.',
+    ],
+];
+
+$exploreLinks = ['Online Store', 'Catering Menu', 'Gift Cards', 'Rewards', 'Custom Orders'];
+$learnLinks = ['Cake Masterclass', 'Pastry Basics', 'Private Classes', 'Event Styling', 'Certification'];
+$socialLinks = [
+    ['icon' => 'bi-instagram', 'label' => 'Instagram'],
+    ['icon' => 'bi-facebook', 'label' => 'Facebook'],
+    ['icon' => 'bi-twitter-x', 'label' => 'Twitter'],
+];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Choice Confectionery</title>
+    <meta name="description"
+        content="Good Choice Confectionery offers custom cakes, pastries, catering, and baking classes in a polished Bootstrap-powered PHP site.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo time(); ?>">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top site-navbar">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+                <img src="assets/img/logo.jpg" alt="Good Choice Logo" style="height: 48px; border-radius: 5px; object-fit: cover;" onerror="this.src='https://placehold.co/100x100?text=LOGO'">
+                <span class="brand-text">Good Choice</span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="siteNav">
+                <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+                    <?php foreach ($navLinks as $link): ?>
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="<?= htmlspecialchars($link['href']) ?>"><?= htmlspecialchars($link['label']) ?></a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+                <a class="btn btn-brand" href="#contact">Reservation</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="top">
+        <section class="hero-section text-white relative">
+            <div class="container relative z-10">
+                <div class="row align-items-center g-5 py-5 hero-main-layout">
+                    <!-- Right: Large Floating Image (Now Left) -->
+                    <div class="col-lg-6 hero-image-col text-center relative pointer-events-none">
+                        <img id="hero-main-img" src="<?= htmlspecialchars($heroCategories[0]['image']) ?>" class="img-fluid hero-floating-img" alt="Hero Featured Image">
+                        <div class="floating-particle particle-1"></div>
+                        <div class="floating-particle particle-2"></div>
+                        <div class="floating-particle particle-3"></div>
+                    </div>
+                    
+                    <!-- Left: Text and Controls (Now Right) -->
+                    <div class="col-lg-6 hero-text-col">
+                        <span id="hero-tag" class="section-tag section-tag-light mb-3 block"><?= htmlspecialchars($heroCategories[0]['eyebrow']) ?></span>
+                        <h1 id="hero-title" class="display-3 hero-title text-uppercase font-bold mt-2" style="font-family: 'Sora', sans-serif; line-height: 1.1; color: #FFF;"><?= htmlspecialchars($heroCategories[0]['headline']) ?></h1>
+                        <p id="hero-copy" class="hero-copy hero-copy-light mt-4" style="font-size: 1.15rem; color: rgba(255,255,255,0.8);"><?= htmlspecialchars($heroCategories[0]['subtext']) ?></p>
+                        <div class="d-flex flex-wrap gap-3 mt-5 pb-5">
+                            <a class="btn btn-brand btn-lg rounded-pill" href="#contact" style="padding: 1rem 2rem; box-shadow: 0 4px 20px rgba(242, 133, 0, 0.4);">Order Now</a>
+                            <a class="btn btn-outline-light btn-lg rounded-pill" href="#products" style="padding: 1rem 2rem; color: var(--brand-gold); border-color: rgba(242, 133, 0, 0.5);">View Menu</a>
+                        </div>
+                        
+                        <!-- Thumbnail Carousel at the bottom right -->
+                        <div class="hero-thumbnails-wrap d-flex gap-3 mt-4">
+                            <?php foreach ($heroCategories as $index => $cat): ?>
+                                <div class="hero-thumb-box <?= $index === 0 ? 'active' : '' ?>" data-index="<?= $index ?>" role="button">
+                                    <img src="<?= htmlspecialchars($cat['thumb']) ?>" alt="<?= htmlspecialchars($cat['id']) ?>">
+                                    <div class="thumb-label"><?= ucfirst(htmlspecialchars($cat['id'])) ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Interactive Script -->
+            <script>
+                const categories = <?= json_encode($heroCategories) ?>;
+                
+                document.addEventListener('DOMContentLoaded', () => {
+                    const thumbs = document.querySelectorAll('.hero-thumb-box');
+                    const mainImg = document.getElementById('hero-main-img');
+                    const heroTitle = document.getElementById('hero-title');
+                    const heroCopy = document.getElementById('hero-copy');
+                    const heroTag = document.getElementById('hero-tag');
+                    
+                    thumbs.forEach(thumb => {
+                        thumb.addEventListener('click', function() {
+                            // remove active class
+                            thumbs.forEach(t => t.classList.remove('active'));
+                            this.classList.add('active');
+                            
+                            // update data
+                            const index = this.getAttribute('data-index');
+                            const data = categories[index];
+                            
+                            // animate out
+                            mainImg.style.opacity = '0';
+                            heroTitle.style.opacity = '0';
+                            heroCopy.style.opacity = '0';
+                            heroTag.style.opacity = '0';
+                            
+                            setTimeout(() => {
+                                mainImg.src = data.image;
+                                heroTitle.textContent = data.headline;
+                                heroCopy.textContent = data.subtext;
+                                heroTag.textContent = data.eyebrow;
+                                
+                                // animate in
+                                mainImg.style.opacity = '1';
+                                heroTitle.style.opacity = '1';
+                                heroCopy.style.opacity = '1';
+                                heroTag.style.opacity = '1';
+                            }, 300);
+                        });
+                    });
+                });
+            </script>
+        </section>
+
+        <section id="services" class="section-space section-overlap reveal">
+            <div class="container">
+                <div class="row g-4">
+                    <?php foreach ($services as $service): ?>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="service-card h-100">
+                                <div class="service-icon">
+                                    <i class="bi <?= htmlspecialchars($service['icon']) ?>"></i>
+                                </div>
+                                <h3><?= htmlspecialchars($service['title']) ?></h3>
+                                <p><?= htmlspecialchars($service['description']) ?></p>
+                                <div class="service-image-wrap mt-4">
+                                    <img src="<?= htmlspecialchars($service['image']) ?>"
+                                        alt="<?= htmlspecialchars($service['title']) ?>" class="img-fluid service-image">
+                                </div>
+                            </article>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="section-space section-dark reveal">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-tag">Freshly prepared</span>
+                    <h2 class="mt-3">Featured Delicacies</h2>
+                    <p class="mx-auto">A curated look at the cakes and pastries clients ask for again and again.</p>
+                </div>
+                <div class="row g-4">
+                    <?php foreach ($products as $product): ?>
+                        <div class="col-md-6 col-xl-3">
+                            <article class="product-card h-100">
+                                <div class="product-image-wrap">
+                                    <img src="<?= htmlspecialchars($product['image']) ?>"
+                                        alt="<?= htmlspecialchars($product['name']) ?>" class="img-fluid product-image">
+                                    <span class="product-badge"><?= htmlspecialchars($product['category']) ?></span>
+                                </div>
+                                <div class="product-info">
+                                    <small class="text-uppercase fw-extrabold tracking text-gold mb-2 d-block"
+                                        style="font-size: 0.65rem; color: var(--brand-gold);">Good Choice Original</small>
+                                    <h3><?= htmlspecialchars($product['name']) ?></h3>
+                                    <p class="product-price mb-4"><?= htmlspecialchars($product['price']) ?></p>
+                                    <a class="btn btn-outline-dark w-100 rounded-pill fw-bold" href="#contact">Enquire
+                                        Now</a>
+                                </div>
+                            </article>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="catering" class="section-space catering-section reveal">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="catering-image-stack">
+                            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200"
+                                alt="Events and catering" class="img-fluid catering-main-image">
+                            <div class="floating-note shadow">
+                                <div class="d-flex align-items-center gap-3 mb-2">
+                                    <span class="floating-icon"><i class="bi bi-calendar-event"></i></span>
+                                    <strong>Summer bookings open</strong>
+                                </div>
+                                <p class="mb-0">Reserve your date for a premium dessert bar experience tailored to your
+                                    event theme.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <span class="section-tag">Elevate your event</span>
+                        <h2 class="mt-3">Memorable catering for extraordinary events.</h2>
+                        <p class="lead section-copy">Whether it is a corporate gala, a private wedding, or a birthday
+                            celebration, our team creates dessert styling and catering experiences that feel bespoke
+                            from the first sketch to the final setup.</p>
+                        <div class="row g-4 mt-2">
+                            <div class="col-sm-6">
+                                <div class="feature-inline">
+                                    <span><i class="bi bi-people-fill"></i></span>
+                                    <div>
+                                        <h3>Bespoke design</h3>
+                                        <p>Every display is styled around your colors, story, and guest experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-inline">
+                                    <span><i class="bi bi-geo-alt-fill"></i></span>
+                                    <div>
+                                        <h3>Nationwide service</h3>
+                                        <p>We bring the luxury bakery experience directly to your location.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-dark btn-lg mt-4" href="#contact">Request A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="training" class="section-space section-dark reveal">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-tag">Learning the art</span>
+                    <h2 class="mt-3">Baking Training Programs</h2>
+                    <p class="mx-auto">Structured courses for aspiring bakers, side-hustlers, and professionals ready to
+                        refine their craft.</p>
+                </div>
+                <div class="row g-4">
+                    <?php foreach ($courses as $course): ?>
+                        <div class="col-md-6 col-xl-4">
+                            <article class="course-card h-100">
+                                <div class="course-image-wrap">
+                                    <img src="<?= htmlspecialchars($course['image']) ?>"
+                                        alt="<?= htmlspecialchars($course['title']) ?>" class="img-fluid course-image">
+                                    <span class="course-level"><?= htmlspecialchars($course['level']) ?></span>
+                                </div>
+                                <div class="p-4">
+                                    <div class="rating mb-3">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <small class="ms-2">Expert Led</small>
+                                    </div>
+                                    <h3 class="mb-3"><?= htmlspecialchars($course['title']) ?></h3>
+                                    <div class="row g-0 py-3 border-top border-bottom border-light mb-4">
+                                        <div class="col-6">
+                                            <span class="d-block text-muted small text-uppercase fw-bold">Duration</span>
+                                            <strong class="text-dark"><?= htmlspecialchars($course['duration']) ?></strong>
+                                        </div>
+                                        <div class="col-6">
+                                            <span class="d-block text-muted small text-uppercase fw-bold">Investment</span>
+                                            <strong class="text-dark"><?= htmlspecialchars($course['price']) ?></strong>
+                                        </div>
+                                    </div>
+                                    <a class="btn btn-dark w-100 rounded-pill fw-bold py-2" href="#contact">Secure Seat</a>
+                                </div>
+                            </article>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-space reveal">
+            <div class="container">
+                <div
+                    class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3 section-heading section-heading-split">
+                    <div>
+                        <span class="section-tag">Visual storytelling</span>
+                        <h2 class="mt-3 mb-0">Gallery Of Art</h2>
+                    </div>
+                    <a href="#contact" class="text-decoration-none gallery-link">Follow on Instagram</a>
+                </div>
+                <div class="gallery-grid">
+                    <?php foreach ($gallery as $index => $image): ?>
+                        <div class="gallery-item">
+                            <img src="<?= htmlspecialchars($image) ?>" alt="Good Choice gallery image <?= $index + 1 ?>"
+                                class="img-fluid">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-space testimonials-section">
+            <div class="container">
+                <div class="section-heading text-center text-white">
+                    <span class="section-tag text-white-50">Client voices</span>
+                    <h2 class="mt-3 text-white">Trust In Every Bite</h2>
+                </div>
+                <div class="row g-4">
+                    <?php foreach ($testimonials as $testimonial): ?>
+                        <div class="col-md-6 col-xl-4">
+                            <article class="testimonial-card h-100">
+                                <div class="rating mb-4">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>"<?= htmlspecialchars($testimonial['text']) ?>"</p>
+                                <h3><?= htmlspecialchars($testimonial['name']) ?></h3>
+                                <span><?= htmlspecialchars($testimonial['role']) ?></span>
+                            </article>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-space cta-section">
+            <div class="container">
+                <div class="cta-panel text-center">
+                    <span class="section-tag text-white-50">Ready when you are</span>
+                    <h2 class="text-white mt-3">Ready to order or start your journey?</h2>
+                    <p>Contact us today for custom orders, catering inquiries, or a spot in our next masterclass.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                        <a class="btn btn-dark btn-lg" href="mailto:hello@goodchoice.com">Order Now</a>
+                        <a class="btn btn-outline-light btn-lg" href="tel:+2348000000000">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3" href="#top">
+                        <span class="brand-mark">G</span>
+                        <span class="brand-text">Good Choice</span>
+                    </a>
+                    <p class="footer-copy">The destination for artisanal cakes, pastries, event catering, and
+                        professional baking education.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <?php foreach ($socialLinks as $social): ?>
+                            <a href="#contact" class="social-link" aria-label="<?= htmlspecialchars($social['label']) ?>">
+                                <i class="bi <?= htmlspecialchars($social['icon']) ?>"></i>
+                            </a>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h3>Explore</h3>
+                    <ul class="list-unstyled footer-links">
+                        <?php foreach ($exploreLinks as $item): ?>
+                            <li><a href="#products"><?= htmlspecialchars($item) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h3>Learn</h3>
+                    <ul class="list-unstyled footer-links">
+                        <?php foreach ($learnLinks as $item): ?>
+                            <li><a href="#training"><?= htmlspecialchars($item) ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3>Contact</h3>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <strong>HQ Address</strong>
+                            <span>12 Bakery Avenue, Suite 100, Artisan District, AD 4501</span>
+                        </li>
+                        <li>
+                            <strong>Email Inquiry</strong>
+                            <span>hello@goodchoice.com</span>
+                        </li>
+                        <li>
+                            <strong>Call Us</strong>
+                            <span>+234 800 000 0000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <?= htmlspecialchars((string) $currentYear) ?> Good Choice Confectionery. Designed for
+                    excellence.</p>
+                <div class="d-flex gap-4">
+                    <a href="#top">Privacy Policy</a>
+                    <a href="#top">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.site-navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
